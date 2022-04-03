@@ -8,13 +8,17 @@ body {
     min-width: 350px;
     height: 100vh;
     width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("https://voyage-onirique.com/wp-content/uploads/2020/03/backiee-138908-landscape-scaled.jpg");
 }
 
 header {
     display: flex;
     height: 25%;
     justify-content: center;
-    background-color: #373737;
+    background-color: rgba(0, 0, 0, 0.65);
     font-family: 'Roboto';
 }
 
@@ -37,7 +41,7 @@ header {
 
 .info a:hover {
     transition: 250ms;
-    color: #82C1C9;
+    color: #cff7fd;
 }
 
 #HTMLPages {
@@ -65,7 +69,6 @@ header {
     color: #EEEEEE;
     font-weight: 100;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
     overflow: auto;
 }
@@ -75,13 +78,14 @@ header {
     justify-content: center;
     align-items: center;
     transition: 100ms;
+    margin-left: 3%;
 }
 
 #aHTML a:hover {
     background-color: #91d1da;
     color: rgb(50, 50, 50);
     font-weight: 400;
-    box-shadow: 0 0 4px 1px;
+    box-shadow: 0 0 3px 1px;
     transition: 125ms;
 }
 
@@ -111,13 +115,22 @@ section {
     width: 100%;
     justify-content: center;
     min-height: 75px;
-    background-color: green;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Raleway';
+    font-weight: 500;
 }
 
 .image {
+    display: flex;
     height: 100%;
     width: 25%;
-    background-color: yellow;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-height: 100%;
+    width: auto;
 }
 
 .central {
@@ -126,10 +139,21 @@ section {
     width: 25%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.pageName {}
+.pageName {
+    font-size: 200%;
+}
+
+.pageName a {
+    outline: none;
+    /* text-decoration: none; */
+    color: black;
+    font-weight: 500;
+}
+
+.FREN {}
 
 .menu {}
 
@@ -140,7 +164,8 @@ section {
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    background-color: yellow;
+    padding-top: 1%;
+    font-size: 105%;
 }
 
 @media screen and (max-width: 650px) {
@@ -150,6 +175,9 @@ section {
         width: 30%;
         font-size: 90%
     }
+    .used {
+        font-size: 95%;
+    }
     .info {
         width: 20%;
         font-size: 150%;
@@ -157,6 +185,9 @@ section {
     #HTMLPages {
         width: 60%;
         font-size: 90%;
+    }
+    .pageName {
+        font-size: 175%;
     }
 }
 
@@ -169,7 +200,7 @@ section {
         font-size: 80%;
     }
     .used {
-        font-size: 80%;
+        font-size: 85%;
         width: 33%;
     }
     .info {
@@ -178,11 +209,14 @@ section {
     #HTMLPages {
         font-size: 80%;
     }
+    .pageName {
+        font-size: 150%;
+    }
 }
 
 footer {
     height: 25%;
-    background-color: blue;
+    background-color: rgba(76, 0, 255, 0.85);
 }
 
 *::-webkit-scrollbar {
@@ -194,6 +228,6 @@ footer {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #7baab9;
+    background-color: #68cbec;
     border-radius: 5px;
 }

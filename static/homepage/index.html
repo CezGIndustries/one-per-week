@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="/ressources/homepage/style.css" />
     <script src="/ressources/homepage/script.js"></script>
 
-    <!-- Roboto font -->
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Roboto font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Raleway font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,23 +22,8 @@
         <div id="HTMLPages">
             <h1>HTML Pages</h1>
             <div id="aHTML">
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
-                <a href="aze">aze</a>
+                {{range .}}
+                <a href="/{{.Href}}">{{.Name}}</a> {{end}}
                 <a href="aze">aze</a>
             </div>
         </div>
@@ -43,46 +31,30 @@
             <a href="/why">Why?</a>
         </div>
     </header>
+    {{range .}}
     <section>
         <div class="image">
-
+            <img src="{{.Image}}" width="250" height="250">
         </div>
         <div class="central">
             <div class="pageName">
-                <a href="/home">Home</a>
+                <a href="/{{.Href}}">{{.Name}}</a>
+            </div>
+            <div class="FREN">
+                (button FR/EN)
             </div>
             <div class="menu">
-                aze
+                (open menu)
             </div>
         </div>
         <div class="used">
             <h1>What I used:</h1>
-            <br>
-            <p>HTML/Css</p>
-            <p>JavaScript</p>
-            <p>Golang</p>
+            <br> {{range .Languages}}
+            <p>{{.}}</p>
+            {{end}}
         </div>
     </section>
-    <section>
-        <div class="image">
-
-        </div>
-        <div class="central">
-            <div class="pageName">
-                <a href="/home">Home</a>
-            </div>
-            <div class="menu">
-                aze
-            </div>
-        </div>
-        <div class="used">
-            <h1>What I used:</h1>
-            <br>
-            <p>HTML/Css</p>
-            <p>JavaScript</p>
-            <p>Golang</p>
-        </div>
-    </section>
+    {{end}}
     <footer>
         Footer
     </footer>
