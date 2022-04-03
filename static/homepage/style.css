@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 200px;
+    min-width: 500px;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    background-color: #373737;
+    font-family: 'Roboto';
+}
+
+.Info {
+    display: flex;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 175%;
+    font-weight: 400;
+}
+
+.Info a {
+    outline: none;
+    text-decoration: none;
+    color: #EEEEEE;
+    transition: 200ms;
+}
+
+.Info a:hover {
+    transition: 250ms;
+    color: #82C1C9;
+}
+
+#HTMLPages {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#HTMLPages h1 {
+    display: flex;
+    font-size: 175%;
+    height: 25%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #EEEEEE;
+    font-weight: 300;
+}
+
+#aHTML {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    color: #EEEEEE;
+    font-weight: 100;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+@media screen and (max-height: 400px) {
+    #HTMLPages h1 {
+        display: none;
+    }
+    #aHTML {
+        height: 100%;
+    }
+}
+
+#aHTML a {
+    display: flex;
+    justify-content: center;
+    height: 33%;
+    min-height: 25px;
+    width: 33%;
+    outline: none;
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+section {
+    height: 100%;
+    background-color: green;
+}
+
+footer {
+    height: 25%;
+    background-color: blue;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7baab9;
+    border-radius: 5px;
+}
